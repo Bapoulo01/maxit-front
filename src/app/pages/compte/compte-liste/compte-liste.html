@@ -1,0 +1,78 @@
+  <div class="flex pt-[4%]">
+    <!-- CONTENU -->
+    <main class="ml-60 p-6 w-full">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold">Listes Comptes</h2>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Ajouter</button>
+      </div>
+
+      <!-- FILTRE -->
+      <div class="bg-white shadow p-6 rounded-lg flex flex-wrap gap-4 items-center mb-6">
+        <!-- Client -->
+        <div class="flex items-center gap-2">
+          <label class="text-sm font-semibold">Client</label>
+          <input type="text" placeholder="Client" class="px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:outline-none" />
+          <button class="bg-[#154360] text-white px-2 py-1 rounded hover:bg-blue-800">OK</button>
+        </div>
+        <!-- Status -->
+        <div class="flex items-center gap-2 mx-10">
+          <label class="text-sm font-semibold">Status</label>
+          <select class="px-10 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:outline-none">
+            <option>--</option>
+            <option>Actif</option>
+            <option>Bloqué</option>
+          </select>
+          <button class="bg-[#154360] text-white px-2 py-1 rounded hover:bg-blue-800">OK</button>
+        </div>
+      </div>
+
+      <!-- TABLEAU -->
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <table class="min-w-full text-center">
+          <thead class="bg-[#154360] text-white">
+            <tr>
+              <th class="py-3 px-4">ID</th>
+              <th class="py-3 px-4">Client</th>
+              <th class="py-3 px-4">Solde</th>
+              <th class="py-3 px-4">Status</th>
+              <th class="py-3 px-4">Action</th>
+            </tr>
+          </thead>
+          @for (compte of comptes(); track compte.id) {
+          <tbody class="text-gray-700">
+            <tr class="border-b hover:bg-gray-100">
+              <td class="py-2 px-4">{{compte.numero}}</td>
+              <td class="py-2 px-4">{{ compte.client.prenom }}  {{ compte.client.nom }}</td>
+              <td class="py-2 px-4">{{ compte.solde }} FCFA</td>
+              <td  class="py-2 px-4 text-green-600 font-semibold">{{compte.type}}</td>
+              <td class="py-2 px-4 space-x-2">
+                <button routerlink="comptes/" title="Voir" class="text-blue-600">
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button title="Modifier" class="text-yellow-500">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button title="Supprimer" class="text-red-600">
+                    <i class="fas fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        }@empty {
+        <p>Aucun compte disponible.</p>
+        }
+        </table>
+
+        <!-- PAGINATION -->
+        <div class="flex justify-end p-4">
+          <nav class="inline-flex -space-x-px">
+            <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">«</a>
+            <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">1</a>
+            <a href="#" class="px-3 py-1 bg-blue-500 text-white border border-blue-600 text-sm">2</a>
+            <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">3</a>
+            <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">»</a>
+          </nav>
+        </div>
+      </div>
+    </main>
+  </div>

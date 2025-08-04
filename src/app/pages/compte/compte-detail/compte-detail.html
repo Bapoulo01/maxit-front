@@ -1,0 +1,73 @@
+<div class="flex pt-[4%]">
+    <!-- CONTENU PRINCIPAL -->
+    <main class="ml-60 p-6 w-full">
+        <h2 class="text-2xl font-semibold mb-2">Listes Comptes</h2>
+        <div class="flex justify-between items-center mb-6">
+            <p class="text-sm text-gray-600">Compte / <span class="text-blue-600">Detail Compte</span></p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">New transaction</button>
+        </div>
+        <div class="flex justify-between items-start gap-6">
+            <!-- INFOS COMPTE -->
+            <div class="bg-white shadow rounded-lg p-6 w-full max-w-sm">
+                <h3 class="text-lg font-bold mb-4">Infos compte</h3>
+                <ul class="space-y-2 text-gray-800 text-[15px]">
+                    <li><span class="font-semibold">N° :</span> C001</li>
+                    <li><span class="font-semibold">Titulaire :</span> Oumar Dia</li>
+                    <li><span class="font-semibold">NCI :</span> 1929199800223</li>
+                    <li><span class="font-semibold">Type Compte :</span> Principal</li>
+                    <li><span class="font-semibold">Status :</span> <span class="text-green-600 font-bold">Actif</span>
+                    </li>
+                    <li><span class="font-semibold">Solde :</span> 175.000 fcfa</li>
+                </ul>
+
+                <div class="flex mt-6">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded mx-5">modifier</button>
+                    <button class="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded">Bloquer ❌</button>
+                </div>
+            </div>
+
+            <!-- HISTORIQUE TRANSACTIONS -->
+            <div class="bg-white shadow rounded-lg p-6 w-full">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-bold">Historiques Transaction</h3>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="min-w-full text-center">
+                        <thead class="bg-[#154360] text-white">
+                            <tr>
+                                <th class="py-2 px-4">ID</th>
+                                <th class="py-2 px-4">Date</th>
+                                <th class="py-2 px-4">Type</th>
+                                <th class="py-2 px-4">Montant</th>
+                                <th class="py-2 px-4">Sole Apres</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 text-sm">
+                            <tr class="border-b">
+                                <td class="py-2 px-4">T001</td>
+                                <td class="py-2 px-4">12/05/2025</td>
+                                <td class="py-2 px-4">Depot</td>
+                                <td class="py-2 px-4">20.000</td>
+                                <td class="py-2 px-4">80.000</td>
+                            </tr>
+
+                            <!-- ... autres lignes ... -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- PAGINATION -->
+                <div class="flex justify-end mt-4">
+                    <nav class="inline-flex -space-x-px text-sm">
+                        <a href="#" class="px-3 py-1 bg-white border border-gray-300 hover:bg-gray-100">‹</a>
+                        <a href="#" class="px-3 py-1 bg-white border border-gray-300 hover:bg-gray-100">1</a>
+                        <a href="#" class="px-3 py-1 bg-blue-500 text-white border border-blue-600">2</a>
+                        <a href="#" class="px-3 py-1 bg-white border border-gray-300 hover:bg-gray-100">3</a>
+                        <a href="#" class="px-3 py-1 bg-white border border-gray-300 hover:bg-gray-100">›</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
