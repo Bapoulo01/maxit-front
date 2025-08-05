@@ -46,9 +46,9 @@
               <td class="py-2 px-4">{{ compte.solde }} FCFA</td>
               <td  class="py-2 px-4 text-green-600 font-semibold">{{compte.type}}</td>
               <td class="py-2 px-4 space-x-2">
-                <button routerlink="comptes/" title="Voir" class="text-blue-600">
+                <a routerLink="/compte/comptes/{{ compte.numero }}/details" title="Voir" class="text-blue-600">
                     <i class="fas fa-eye"></i>
-                </button>
+                </a>
                 <button title="Modifier" class="text-yellow-500">
                     <i class="fas fa-edit"></i>
                 </button>

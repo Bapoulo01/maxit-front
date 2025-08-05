@@ -1,97 +1,71 @@
+<div class="flex pt-[4%]">
 
+  <!-- CONTENU -->
+  <main class="ml-60 p-6 w-full">
+    <h2 class="text-2xl font-semibold mb-6">Listes demandes</h2>
 
-
-  <div class="flex pt-[4%]">
-  
-
-    <!-- CONTENU -->
-    <main class="ml-60 p-6 w-full">
-      <h2 class="text-2xl font-semibold mb-6">Listes demandes</h2>
-
-      <!-- FORMULAIRE DE FILTRE -->
-      <div class="bg-white shadow p-6 rounded-lg flex flex-wrap gap-4 items-center mb-6">
-        <!-- Champ Client -->
-        <div class="flex items-center gap-2">
-          <label class="text-sm font-semibold">Client</label>
-          <input type="text" placeholder="Client" class="px-10 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:outline-none" />
-          <button class="bg-[#154360] text-white px-2 py-1 rounded hover:bg-blue-800">OK</button>
-        </div>
-        <!-- Champ État -->
-        <div class="flex items-center gap-3 mx-10">
-          <label class="text-sm font-semibold">État</label>
-          <select class="px-10 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:outline-none">
-            <option>--</option>
-            <option>En attente</option>
-            <option>Validé</option>
-            <option>Refusé</option>
-          </select>
-          <button class="bg-[#154360] text-white px-2 py-1 rounded hover:bg-blue-800">OK</button>
-        </div>
+    <!-- FORMULAIRE DE FILTRE -->
+    <div class="bg-white shadow p-6 rounded-lg flex flex-wrap gap-4 items-center mb-6">
+      <!-- Champ Client -->
+      <div class="flex items-center gap-2">
+        <label class="text-sm font-semibold">Client</label>
+        <input type="text" placeholder="Client"
+          class="px-10 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:outline-none" />
+        <button class="bg-[#154360] text-white px-2 py-1 rounded hover:bg-blue-800">OK</button>
       </div>
-
-      <!-- TABLEAU -->
-      <div class="bg-white shadow rounded-lg overflow-hidden">
-        <table class="min-w-full text-center">
-          <thead class="bg-[#154360] text-white">
-            <tr>
-              <th class="py-3 px-4">ID</th>
-              <th class="py-3 px-4">Date</th>
-              <th class="py-3 px-4">Client</th>
-              <th class="py-3 px-4">Montant</th>
-              <th class="py-3 px-4">État</th>
-              <th class="py-3 px-4">Action</th>
-            </tr>
-          </thead>
-          <tbody class="text-gray-700">
-            <tr class="border-b hover:bg-gray-100">
-              <td class="py-3 px-4">D001</td>
-              <td class="py-3 px-4">10/04/2025</td>
-              <td class="py-3 px-4">Assane Dia</td>
-              <td class="py-3 px-4">50.000</td>
-              <td class="py-3 px-4 text-gray-600">En attente</td>
-              <td class="py-3 px-4 text-blue-600 hover:underline cursor-pointer">Voir Détail</td>
-            </tr>
-            <tr class="border-b hover:bg-gray-100">
-              <td class="py-3 px-4">D001</td>
-              <td class="py-3 px-4">10/04/2025</td>
-              <td class="py-3 px-4">Assane Dia</td>
-              <td class="py-3 px-4">50.000</td>
-              <td class="py-3 px-4 text-green-600 font-semibold">Validé</td>
-              <td class="py-3 px-4 text-blue-600 hover:underline cursor-pointer">Voir Détail</td>
-            </tr>
-            <tr class="border-b hover:bg-gray-100">
-              <td class="py-3 px-4">D001</td>
-              <td class="py-3 px-4">10/04/2025</td>
-              <td class="py-3 px-4">Assane Dia</td>
-              <td class="py-3 px-4">50.000</td>
-              <td class="py-3 px-4 text-red-600 font-semibold">Refusé</td>
-              <td class="py-3 px-4 text-blue-600 hover:underline cursor-pointer">Voir Détail</td>
-            </tr>
-             <tr class="border-b hover:bg-gray-100">
-              <td class="py-3 px-4">D001</td>
-              <td class="py-3 px-4">10/04/2025</td>
-              <td class="py-3 px-4">Assane Dia</td>
-              <td class="py-3 px-4">50.000</td>
-              <td class="py-3 px-4 text-red-600 font-semibold">Refusé</td>
-              <td class="py-3 px-4 text-blue-600 hover:underline cursor-pointer">Voir Détail</td>
-            </tr>   
-
-          </tbody>
-        </table>
-
-        <!-- PAGINATION -->
-        <div class="flex justify-end p-4">
-          <nav class="inline-flex -space-x-px">
-            <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">«</a>
-            <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">1</a>
-            <a href="#" class="px-3 py-1 bg-blue-500 text-white border border-blue-600 text-sm">2</a>
-            <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">3</a>
-            <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">»</a>
-          </nav>
-        </div>
+      <!-- Champ État -->
+      <div class="flex items-center gap-3 mx-10">
+        <label class="text-sm font-semibold">État</label>
+        <select class="px-10 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:outline-none">
+          <option>--</option>
+          <option>En attente</option>
+          <option>Validé</option>
+          <option>Refusé</option>
+        </select>
+        <button class="bg-[#154360] text-white px-2 py-1 rounded hover:bg-blue-800">OK</button>
       </div>
-    </main>
-    
-  </div>
+    </div>
 
+    <!-- TABLEAU -->
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+      <table class="min-w-full text-center">
+        <thead class="bg-[#154360] text-white">
+          <tr>
+            <th class="py-3 px-4">ID</th>
+            <th class="py-3 px-4">Date</th>
+            <th class="py-3 px-4">Client</th>
+            <th class="py-3 px-4">Montant</th>
+            <th class="py-3 px-4">État</th>
+            <th class="py-3 px-4">Action</th>
+          </tr>
+        </thead>
+        @for (demande of demandes(); track demande.id) {
+        <tbody class="text-gray-700">
+          <tr class="border-b hover:bg-gray-100">
+            <td class="py-3 px-4">{{demande.numero}}</td>
+            <td class="py-3 px-4">{{demande.date}}</td>
+            <td class="py-3 px-4">{{demande.client.prenom}}  {{demande.client.nom}}</td>
+            <td class="py-3 px-4">{{demande.montant}}</td>
+            <td class="py-3 px-4 text-gray-600">{{demande.type}}</td>
+            <td routerLink="/compte/demande/{{ demande.numero }}/details" class="py-3 px-4 text-blue-600 hover:underline cursor-pointer">Voir Détail</td>
+          </tr>
+        </tbody>
+        }@empty {
+        <p>Aucune demande disponible.</p>
+        }
+      </table>
 
+      <!-- PAGINATION -->
+      <div class="flex justify-end p-4">
+        <nav class="inline-flex -space-x-px">
+          <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">«</a>
+          <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">1</a>
+          <a href="#" class="px-3 py-1 bg-blue-500 text-white border border-blue-600 text-sm">2</a>
+          <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">3</a>
+          <a href="#" class="px-3 py-1 bg-white border border-gray-300 text-sm hover:bg-gray-100">»</a>
+        </nav>
+      </div>
+    </div>
+  </main>
+
+</div>

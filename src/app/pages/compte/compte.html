@@ -9,11 +9,11 @@
    <!-- SIDEBAR -->
     <aside class="w-56 h-[92%] bg-[#154360] text-white p-6 fixed top-[10%] left-0 flex flex-col">
       <nav class="space-y-4 flex-grow">
-        <a routerlink="/compte/dashbord" class="block py-2 px-4 hover:bg-blue-800 rounded">Dashboard</a>
-        <a href="#" class="block py-2 px-4 bg-white text-gray-900 rounded font-semibold">Listes Demandes</a>
-        <a href="#" class="block py-2 px-4 hover:bg-blue-800 rounded">Listes Comptes</a>
+        <a routerlink="dashboard" class="block py-2 px-4 hover:bg-blue-800 rounded">Dashboard</a>
+        <a routerLink="demande"  class="block py-2 px-4 bg-white  text-gray-900 rounded font-semibold">Listes Demandes</a>
+        <a routerlink="comptes"  class="block py-2 px-4 hover:bg-blue-800 rounded">Listes Comptes</a>
       </nav>
-      <button class="mt-auto mb-2 w-full py-2 border bg-white text-[#154360] font-semibold rounded hover:bg-white hover:text-gray-900 transition">
+      <button routerLink="/security/login" class="mt-auto mb-2 w-full py-2 border bg-white text-[#154360] font-semibold rounded hover:bg-white hover:text-gray-900 transition">
         Se déconnecter
       </button>
     </aside>
